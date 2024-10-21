@@ -1,0 +1,393 @@
+html{
+    margin: 0;
+    left: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, #002143, #70b8ff);
+    background-attachment:fixed;
+}
+
+.backFixed{
+    width: 776px;
+    height: 182px;
+    /* background-color: bisque; */
+    position: fixed;
+    top: 0;
+    left: 0; 
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.setaBottom{
+    width: 25px;
+    height: 25px;
+    background-image: url(../assets/down-arrow.png);
+    /* background-color: #222; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ccc;
+    position: fixed;
+    z-index: 2;
+    padding: 10px;
+    border-radius: 5px;
+    font-style: italic;
+    top: 402px;
+    left: 39px;
+}
+
+.setaBottom:hover{
+ transform: translate(0, -2px);
+}
+
+.mapaContrucao{
+    min-width: 640px;
+    min-height: 640px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    position: absolute;
+    top: 234px;
+    left: 114px;
+
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    /* grid-template-rows: repeat(10,1fr); */
+}
+
+.click{
+    cursor: cell;
+    transform: scale(.5);
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.grid, .atalhoc, .erased{
+    position: fixed;
+    cursor: pointer;
+}
+
+.grid{
+    left: 44px;
+    top: 236px;
+}
+
+.atalhoc{
+    left: 40px;
+    top: 289px;
+}
+.erased{
+    left: 45px;
+    top: 342px;
+}
+
+.grid img,
+.atalhoc img,
+.erased img{
+    width: 35px;
+}
+.config:active{
+    transform: translate(0, -2px);
+}
+.painel{
+    width: 155px;
+    height: 155px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    border: 5px dashed rgb(22, 22, 22);
+    position: fixed;
+    top: 44px;
+    left: 33px;
+    z-index: 9;
+}
+
+.tilesetVisivel {
+    transform: scale(1.6);
+}
+
+.menu{
+    position: fixed;
+    top: 26px;
+    left: 175px;
+    z-index: 8;
+}
+
+.menu #mapa{
+    transform: scale(1.5);
+}
+
+/* abertura de bau */
+.conteudo{
+    min-width: 132px;
+    min-height: 154px;
+    background-color: rgba(80, 60, 31, 0);
+    cursor: pointer;
+    position:absolute;
+    left: 774.8px;
+    top: 40.1px;
+    transform: scale(.7);
+}
+
+.conteudo{
+    background-image: url(../assets/TX\ Chest\ Animation.png);
+    background-position: -122px -96px;
+    background-size: 2000px;
+
+
+}
+
+.openBox{
+    animation: openBox .400s steps(1);
+    animation-fill-mode:forwards;
+}
+
+.openBoxReverse{
+    animation: openBoxReverse .600s steps(1);
+    animation-fill-mode:forwards;
+}
+
+
+.item{
+    border: 1px dashed rgba(255, 255, 255, 0.37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    /* z-index: 10; */
+    user-select: none; /* Para navegadores modernos */
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+.no-select {
+    user-select: none; /* Para navegadores modernos */
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+@keyframes openBox {
+
+    0% {
+        background-position: -122px -96px; 
+    }
+
+    20% {
+        background-position: -372px -96px;
+    }
+
+    40% {
+        background-position: -622px -96px;
+    }
+
+    60% {
+        background-position: -872px -96px;
+    }
+
+    80% {
+        background-position: -1372px -96px;
+    }
+
+    100%{
+        background-position: -1372px -96px;
+    }
+    
+}
+
+@keyframes openBoxReverse {
+    0% {
+        background-position: -1372px -96px;
+    }
+    
+    20% {
+        background-position: -1122px -96px;
+    }
+    
+    40% {
+        background-position: -872px -96px;
+    }
+    
+    60% {
+        background-position: -622px -96px;
+    }
+    
+    80% {
+        background-position: -372px -96px;
+    }
+    
+    100% {
+        background-position: -122px -96px;
+    }
+    
+}
+
+
+
+
+
+/* mapa */
+#mapa{
+    min-width: 64px;
+    min-height: 64px;
+    /* transform: scale(1.5); */
+    background-size: 1000px;
+    position: absolute;
+    filter: contrast(1.2);
+    background-image: url(../assets/TX\ Tileset\ Ground.png);
+}
+.tileset{
+    cursor: grab;
+
+}
+.tileset:active{
+    cursor: grabbing;
+}
+.tileset01{
+    background-position: 1px 1px;
+    left: 150px;
+    top: 50px
+}
+.tileset02{
+    background-position: -62px 1px;
+    left: 250px;
+    top: 50px;
+}
+.tileset03{
+    background-position: -125px 1px;
+    left: 350px;
+    top: 50px;
+}
+.tileset04{
+    background-position: 1px -64px;
+    left: 450px;
+    top: 50px;
+}
+.tileset05{
+    background-position: -64px -64px;
+    left: 550px;
+    top: 50px;
+}
+.tileset06{
+    background-position: -125px -64px;
+    left: 650px;
+    top: 50px;
+}
+.tileset07{
+    background-position: -249px -64px;
+    left: 750px;
+    top: 50px;
+}
+.tileset08{
+    background-position: -312px -64px;
+    left: 850px;
+    top: 50px;
+}
+.tileset09{
+    background-position: -125px -128px;
+    left: 950px;
+    top: 50px;
+}
+.tileset010{
+    background-position: -63px -128px;
+    left: 150px;
+    top: 150px;
+}
+.tileset011{
+    background-position: -749px -64px;
+    left: 250px;
+    top: 150px;
+}
+.tileset012{
+    background-position: -813px -64px;
+    left: 350px;
+    top: 150px;
+}
+.tileset013{
+    background-position: -0px -250px;
+    left: 450px;
+    top: 150px;
+}
+.tileset014{
+    background-position: -123px -250px;
+    left: 550px;
+    top: 150px;
+}
+.tileset015{
+    background-position: -0px -373px;
+    left: 650px;
+    top: 150px;
+}
+.tileset016{
+    background-position: -123px -374px;
+    left: 750px;
+    top: 150px;
+}
+.tileset017{
+    background-position: -623px -186px;
+    left: 850px;
+    top: 150px;
+}
+.tileset018{
+    background-position: -373px -186px;
+    left: 950px;
+    top: 150px;
+}
+.tileset019{
+    background-position: -681px -309px;
+    left: 1050px;
+    top: 150px;
+}
+.tileset020{
+    background-position: -751px -566px;
+    left: 1050px;
+    top: 50px;
+}
+
+
+
+
+
+
+.teste{
+    z-index: 1000;
+    top: 0 ;
+    left: 0 ;
+}
+
+/* teste de movimentação */
+.movel {
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+    position: absolute;
+    cursor: move;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media print {
+    .printable {
+        display: block; /* Certifique-se de que as divs sejam exibidas */
+    }
+}

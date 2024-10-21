@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construct Map 2D</title>
+
+    <script src="javascript/main.js" defer></script>
+    <script src="javascript/grid.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js" defer></script>
+</head>
+<body>
+
+    <div class="painel"></div>
+    <div class="config grid">
+        <img src="assets/grid.png" alt="">
+    </div>
+    <div class="config atalhoc">
+        <img id="atalhoCClick"src="assets/click.png" alt="">
+    </div>
+    <div class="config erased">
+        <img id="erasedClick"src="assets/eraser.png" alt="">
+    </div>
+        <div class="setaBottom" onclick="clickBottomCriar(1)"></div>
+    <div class="menu" id="menu">
+        <div class="click tileset0">
+            <div class="tile tileset01" id="mapa" onclick="trocaDeValor(1)"></div> 
+            <div class="tile tileset02" id="mapa" onclick="trocaDeValor(2)"></div> 
+            <div class="tile tileset03" id="mapa" onclick="trocaDeValor(3)"></div> 
+            <div class="tile tileset04" id="mapa" onclick="trocaDeValor(4)"></div> 
+            <div class="tile tileset05" id="mapa" onclick="trocaDeValor(5)"></div> 
+            <div class="tile tileset06" id="mapa" onclick="trocaDeValor(6)"></div> 
+            <div class="tile tileset07" id="mapa" onclick="trocaDeValor(7)"></div> 
+            <div class="tile tileset08" id="mapa" onclick="trocaDeValor(8)"></div> 
+            <div class="tile tileset09" id="mapa" onclick="trocaDeValor(9)"></div> 
+            <div class="tile tileset010" id="mapa" onclick="trocaDeValor(10)"></div> 
+            <div class="tile tileset011" id="mapa" onclick="trocaDeValor(11)"></div> 
+            <div class="tile tileset012" id="mapa" onclick="trocaDeValor(12)"></div> 
+            <div class="tile tileset013" id="mapa" onclick="trocaDeValor(13)"></div> 
+            <div class="tile tileset014" id="mapa" onclick="trocaDeValor(14)"></div> 
+            <div class="tile tileset015" id="mapa" onclick="trocaDeValor(15)"></div> 
+            <div class="tile tileset016" id="mapa" onclick="trocaDeValor(16)"></div> 
+            <div class="tile tileset017" id="mapa" onclick="trocaDeValor(17)"></div> 
+            <div class="tile tileset018" id="mapa" onclick="trocaDeValor(18)"></div> 
+            <div class="tile tileset019" id="mapa" onclick="trocaDeValor(19)"></div> 
+            <div class="tile tileset020" id="mapa" onclick="trocaDeValor(20)"></div> 
+        </div>
+    </div>
+
+    <div class="backFixed"></div>
+
+    <div class="mapaContrucao">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item" data-id="10">10</div>
+        
+        
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item" data-id="10">10</div>
+
+        
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item" data-id="10">10</div>
+
+        
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item" data-id="10">10</div>
+
+        
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item" data-id="10">10</div>
+
+        
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item" data-id="10">10</div>
+
+        
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item" data-id="10">10</div>
+
+        
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item" data-id="10">10</div>
+
+        
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item" data-id="10">10</div>
+
+        
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item" data-id="10">10</div>
+    </div>
+
+    <div class="tileset conteudo" id="bau"></div>
+    <!-- <div class="tileset tileset017" id="mapa"></div> -->
+    
+</body>
+</html>
